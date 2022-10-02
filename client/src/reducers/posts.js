@@ -4,7 +4,8 @@
 export default (posts = [], action) => {
     switch (action.type) {
         case "FETCH_ALL":
-            return posts;
+            // the payload data is going to be all of our posts we retrieved from our fetchPosts api call
+            return action.payload;
         case "CREATE":
             return posts;
         default:

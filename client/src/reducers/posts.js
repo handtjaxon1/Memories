@@ -7,7 +7,7 @@ export default (posts = [], action) => {
             // the payload data is going to be all of our posts we retrieved from our fetchPosts api call
             return action.payload;
         case "CREATE":
-            return posts;
+            return [...posts, action.payload];
         default:
             return posts;
     }
